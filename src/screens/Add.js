@@ -10,7 +10,7 @@ const initialState = {
   emoji: "📷",
   price: 0,
   isSoled: false,
-  createAt: new Date(),
+  createdAt: new Date(),
 };
 
 const Add = () => {
@@ -28,7 +28,6 @@ const Add = () => {
 
   const onSend = async () => {
     const docRef = await createProduct(newItem);
-    console.log("docRef", docRef);
     setNewItem(initialState);
     navigation.goBack();
   };
